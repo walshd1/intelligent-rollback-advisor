@@ -1,0 +1,19 @@
+name: 'Intelligent Rollback Advisor'
+description: 'Analyzes recent commits and deployment logs to suggest the most likely commit to rollback to in case of a failure.'
+author: 'walshd1'
+branding:
+  icon: 'zap'
+  color: 'blue'
+inputs:
+  gemini_api_key:
+    description: 'Gemini API key (free)'
+    required: false
+  service_token:
+    description: 'Service token (paid)'
+    required: false
+outputs:
+  result:
+    description: 'Result'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
